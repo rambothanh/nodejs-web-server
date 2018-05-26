@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    //Đặt phím tắt khởi động server để Heroku dễ hiểu
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

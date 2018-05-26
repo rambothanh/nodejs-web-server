@@ -2,6 +2,9 @@ const express = require('express');
 //engin handlebar view
 const hbs = require ('hbs');
 const fs = require('fs');
+//Lấy biến muôi trường trên server máy chủ, còn trong máy local thì không lấy
+//mà lấy 3000
+const port = process.env.PORT || 3000;
 var app = express();
 
 //partialsv sử dụng để tách từng phần file hbs để thêm vào file hbs khác 
@@ -70,6 +73,6 @@ app.get('/bad', (req, res) => {
 		errorMessage: 'Unable to handle request'});
 });
 
-app.listen('3000', () => {
-	console.log('Server is up on port3000');
+app.listen(port, () => {
+	console.log(`Server is up on port ${port}`);
 });
